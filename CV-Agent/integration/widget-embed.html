@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferhat Özdağ | Executive Portfolio & AI Assistant</title>
+    
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2792dc;
+            --primary-light: #9ce6e6;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            background-image: radial-gradient(at 0% 0%, hsla(203,70%,80%,0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, hsla(180,70%,80%,0.15) 0px, transparent 50%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-container {
+            max-width: 800px;
+            width: 90%;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.5);
+            margin: 2rem 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .avatar-placeholder {
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem auto;
+            box-shadow: 0 10px 20px rgba(39, 146, 220, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 1.125rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            line-height: 1.7;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.05rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .skill-badge {
+            background: #f1f5f9;
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .ai-notice {
+            background: linear-gradient(to right, rgba(39,146,220,0.05), rgba(156,230,230,0.1));
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .ai-notice-icon {
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .ai-notice-text h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .ai-notice-text p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-container { padding: 2rem 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="portfolio-container">
+        <div class="header">
+            <div class="avatar-placeholder">FÖ</div>
+            <h1>Ferhat Özdağ</h1>
+            <p class="title">Technology Leadership & Contact Center Systems</p>
+        </div>
+
+        <p class="bio">
+            Driving operational excellence through strategic IT management, Voice AI integrations, and enterprise CRM solutions. Explore my career trajectory, project history, and technical expertise through my interactive AI assistant.
+        </p>
+
+        <div class="skills-grid">
+            <span class="skill-badge">IT Leadership</span>
+            <span class="skill-badge">Voice AI Solutions</span>
+            <span class="skill-badge">Contact Center Operations</span>
+            <span class="skill-badge">ServiceNow & ClickUp</span>
+            <span class="skill-badge">Telecom Protocols (SIP)</span>
+        </div>
+
+        <div class="ai-notice">
+            <div class="ai-notice-icon">🎙️</div>
+            <div class="ai-notice-text">
+                <h3>Meet My AI Assistant</h3>
+                <p>I've deployed an ElevenLabs-powered conversational agent trained strictly on my CV. Click the widget in the bottom right corner to ask questions about my professional background in English or Turkish.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ElevenLabs Conversational AI Integration -->
+    <elevenlabs-convai agent-id="agent_7001m491ma8dfqhsmcnmzcweg2hx"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+
+</body>
+</html>
